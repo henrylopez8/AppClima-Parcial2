@@ -9,8 +9,11 @@ import {
   Alert
 } from "react-native";
 import { Picker } from "@react-native-community/picker";
+
 const Formulario = ({busqueda, guardarbusqueda, guardarconsultar}) => {
   const {ciudad} = busqueda
+  console.disableYellowBox = true;
+
   const [animacionboton] = useState(new Animated.Value(1))
   const consultarciudad = () => {
     if(ciudad.trim() === "") {
@@ -53,7 +56,7 @@ const Formulario = ({busqueda, guardarbusqueda, guardarconsultar}) => {
        
 
           <Picker
-            selectedValue={ciudad}
+            selectedValue={ciudad} 
             onValueChange={ciudad => guardarbusqueda({...busqueda, ciudad})}
             style={styles.itempais}
           >
@@ -78,14 +81,13 @@ const Formulario = ({busqueda, guardarbusqueda, guardarconsultar}) => {
             <Picker.Item label="Soyapango" value="3583096" />
             <Picker.Item label="Tonacatepeque" value="3582918" />
           </Picker>
-     
+
         </View>
        
-     
-           {consultarciudad()}
+
          
       </View>
-
+      {consultarciudad()}
     </>
     
   );

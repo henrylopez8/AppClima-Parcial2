@@ -7,9 +7,10 @@ import { Card } from 'react-native-elements';
 
 const Ciudad = ({ resultado,temperatura,clima,viento,temperaturamin,temperaturamax,humedad,tipoclima}) => {
 const [info,setinfo]=useState({});
+console.disableYellowBox = true;
+
 const [nombre,setnombre]=useState();
 const [tiempo,setclima]=useState([]);
-temperatura=10;
 const imagen=(temperatura)=>{
   
 if(temperatura>=31){

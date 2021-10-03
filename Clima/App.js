@@ -7,6 +7,8 @@ export default function App() {
   const [busqueda, guardarbusqueda] = useState({
     ciudad: '',
   });
+  console.disableYellowBox = true;
+
   const [consultar, guardarconsultar] = useState(false);
   const [resultado, guardarresultado] = useState({});
   const [temperaturamax,guardartemperaturamax]=useState();
